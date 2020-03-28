@@ -5,12 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Mesto</title>
-  <link rel="stylesheet" href="./pages/index.css">
+  <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.chunks.main.css %>">
 </head>
 <body>
   <div class="root">
     <header class="header root__section">
-      <img src="./images/logo.svg" alt="mesto logo" class="logo">
+      <img src="<%=require('./images/logo.svg').default%>" alt="mesto logo" class="logo">
     </header>
     <div class="profile root__section">
       <div class="user-info">
@@ -28,7 +28,7 @@
     </div>
     <div class="popup popup__card-add">
       <div class="popup__content">
-        <img src="./images/close.svg" alt="Закрыть окно добавления карточки" class="popup__close">
+        <img src="<%=require('./images/close.svg').default%>" alt="Закрыть окно добавления карточки" class="popup__close">
         <h3 class="popup__title">Новое место</h3>
         <form class="popup__form" id="form" name="new">
           <div class="input-container">
@@ -45,7 +45,7 @@
     </div>
     <div class="popup popup__edit">
       <div class="popup__content">
-        <img src="./images/close.svg" alt="Закрыть окно редактирования профиля" class="popup__close popup__close-edit">
+        <img src="<%=require('./images/close.svg').default%>" alt="Закрыть окно редактирования профиля" class="popup__close popup__close-edit">
         <h3 class="popup__title">Редактировать профиль</h3>
         <form id="form" class="popup__form popup__form-edit" name="edit">
           <div class="input-container">
@@ -62,19 +62,13 @@
     </div>
     <div class="popup popup__photo">
       <div class="popup__content popup__content-photo">
-        <img src="./images/close.svg" alt="Закрыть фото" class="popup__close popup__close-photo">
+        <img src="<%=require('./images/close.svg').default%>" alt="Закрыть фото" class="popup__close popup__close-photo">
         <img src="" alt="Photo" class="popup__image">
       </div>
     </div>
   </div>
 
-  <script src="./scripts/Card.js"></script>
-  <script src="./scripts/CardList.js"></script> 
-  <script src="./scripts/FormValidator.js"></script>
-  <script src="./scripts/Popup.js"></script>
-  <script src="./scripts/UserInfo.js"></script>
-  <script src="./scripts/Api.js"></script>
-  <script src="./scripts/script.js"></script>
+  <script src="<%= htmlWebpackPlugin.files.chunks.main.entry %>"></script>
 
 </body>
 </html>

@@ -1,4 +1,4 @@
-class Popup{
+export class Popup{
     open(event) {
         function popupIsOpened(element){
             element.classList.add('popup_is-opened');
