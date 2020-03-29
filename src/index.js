@@ -1,11 +1,11 @@
-import '../pages/index.css';
-import {Api} from './Api';
-import {Card} from './Card';
-import {CardList} from './CardList';
-import {FormValidator} from './FormValidator';
-import {Popup} from './Popup';
-import {UserInfo} from './UserInfo';
-
+import './pages/index.css';
+import {Api} from './scripts/Api';
+import {Card} from './scripts/Card';
+import {CardList} from './scripts/CardList';
+import {FormValidator} from './scripts/FormValidator';
+import {Popup} from './scripts/Popup';
+import {UserInfo} from './scripts/UserInfo';
+import {serverUrl} from './config.js';
 
 const placesList = document.querySelector('.places-list');
 const popupAddCard = document.querySelector('.popup__card-add');
@@ -21,7 +21,7 @@ const submitAdd = document.querySelector('.popup__button-add');
 const card = new Card();
 
 const api = new Api({
-  baseUrl: 'https://praktikum.tk/cohort8',
+  baseUrl: serverUrl,
   headers: {
     authorization: '98e5e621-4524-4495-81f3-e463b5768eed',
     'Content-Type': 'application/json'
@@ -79,7 +79,6 @@ popupAddCard.addEventListener('keydown', popup.close);
       });
       
       buttonEdit.addEventListener('click', function() {
-        // userInfo.setUserInfo.bind(userInfo);
         document.querySelector('#error-username').textContent = '';
         document.querySelector('#error-about').textContent = '';
         document.querySelector('.name-edit').textContent = '';
