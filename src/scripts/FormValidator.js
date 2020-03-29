@@ -1,13 +1,8 @@
-class FormValidator {
+export class FormValidator {
     constructor(element){
         this.element = element;
     }
-
-/* REVIEW2. Можно лучше. Функция checkInputValidity - это функция общего назначения, она может использоваться не только как слушатель события,
-а просто как функция (возможно во многих проектах, как утилита валидирующая текущее состоянияе элемента), поэтому она не должна зависить от события event.
-Поэтому вместо использования event.target в ней лучше определять элемент input  через параметр класса FormValidator element, параметр checkInputValidity
-тогда можно вообще не задавать.
-*/
+    
     checkInputValidity(event){
         const errors = {validationEmpty: 'Это обязательное поле',
           validationLenght: 'Должно быть от 2 до 30 символов',

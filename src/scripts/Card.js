@@ -1,4 +1,4 @@
-class Card {
+export class Card {
     like(event){
             event.target.classList.toggle('place-card__like-icon_liked');
     }
