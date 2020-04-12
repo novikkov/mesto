@@ -17,10 +17,13 @@ Node.js
 Webpack
 <li>
 NPM-пакеты:
-- #### сборка develop
+
+#### сборка develop
 @babel/cli @babel/core @babel/preset-env autoprefixer babel-loader cross-env css-loader cssnano file-loader gh-pages html-loader html-webpack-plugin@3.2.0 image-webpack-loader lodash mini-css-extract-plugin postcss-loader resolve-url resolve-url-loader style-loader url-loader webpack webpack-cli webpack-dev-server webpack-md5-hash
-- #### сборка build:
+
+#### сборка build:
 babel-polyfill core-js optimize-css-assets-webpack-plugin resolve-cwd
+
 ### Инструкция по сборке:
 <li>
 точка входа: index.js
@@ -30,6 +33,7 @@ babel-polyfill core-js optimize-css-assets-webpack-plugin resolve-cwd
 команда npm run dev запускает сборку develop и открывает проект на локальном сервере по адресу localhost:8080
 <li>
 команда npm run deploy развёртывает проект на сервере gh-pages
+  
 ### Результат проектной работы:
 <li>
 Репозиторий Git состоит из веток master и develop
